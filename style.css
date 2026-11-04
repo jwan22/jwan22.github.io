@@ -104,12 +104,14 @@ main section > h2 {
    ============================================================ */
 .hero { background: var(--accent-block); color: var(--on-block); }
 .hero .wrap {
-  display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem;
+  --name-size: clamp(3.25rem, calc(21vw - 2rem), 16rem);
+  display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: clamp(1rem, 3vw, 2.5rem);
   padding-block: clamp(2.5rem, 7vw, 5rem) 2rem;
 }
 .hero-name {
+  grid-column: 2; grid-row: 1;
   font-weight: 800; font-stretch: 70%;
-  font-size: clamp(5rem, 21vw, 16rem);
+  font-size: var(--name-size);
   line-height: .8; letter-spacing: -.03em; text-transform: uppercase;
 }
 .hero-sub {
@@ -118,7 +120,8 @@ main section > h2 {
   font-family: var(--mono); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase;
 }
 .hero-photo {
-  width: clamp(8rem, 18vw, 13rem); aspect-ratio: 1; object-fit: cover;
+  grid-column: 1; grid-row: 1;
+  height: calc(var(--name-size) * 1.6); width: auto; aspect-ratio: 1; object-fit: cover;
   border: 2px solid var(--on-block);
 }
 
@@ -209,11 +212,10 @@ time { color: var(--muted); white-space: nowrap; }
 .links { list-style: none; padding: 0; margin: 1.75rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 
 /* Cards (projects, outreach, hobbies) */
-.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0; border: 2px solid var(--rule); }
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
 .project {
   display: block; padding: 1.4rem 1.5rem 1.6rem; text-decoration: none;
-  border-right: 2px solid var(--rule); margin-right: -2px;
-  border-bottom: 2px solid var(--rule); margin-bottom: -2px;
+  border: 2px solid var(--rule);
 }
 .project h3 { font-stretch: 75%; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; line-height: 1.05; }
 .project p { color: var(--muted); font-size: .95rem; margin: .6rem 0 0; }
@@ -252,10 +254,9 @@ time { color: var(--muted); white-space: nowrap; }
    ============================================================ */
 @media (max-width: 720px) {
   body { font-size: 16px; }
-  .hero .wrap { grid-template-columns: 1fr; }
-  .hero-photo { grid-row: 1; width: 7rem; }
   main section:not(.page-intro) { grid-template-columns: 1fr; padding-block: 2rem; }
   main section > h2 { grid-row: auto; margin-bottom: 1.25rem; }
+  main section:not(.page-intro) > * { grid-column: 1 !important; }
   .index a { grid-template-columns: 2.75rem 1fr auto; }
   .pub { grid-template-columns: 2.5rem 1fr; }
   .pub-thumb { display: none; }

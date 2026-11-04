@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me · Jenny Wan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="wrap nav">
+      <a class="nav-name" href="index.html">Jenny Wan</a>
+      <ul>
+        <li><a href="research.html"><span class="num">01</span>Research</a></li>
+        <li><a href="teaching.html"><span class="num">02</span>Teaching</a></li>
+        <li><a href="outreach.html"><span class="num">03</span>Outreach</a></li>
+        <li><a href="about.html" class="active"><span class="num">04</span>About Me</a></li>
+        <li><a href="cv.html"><span class="num">05</span>CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="page-intro">
+      <p class="kicker">04 —</p>
+      <h1>About Me</h1>
+      <p>
+        [A more personal introduction: where you grew up, how you got into physics,
+        what first drew you to astrophysics at Caltech, or what keeps you curious.]
+      </p>
+      <p>
+        [What a typical day looks like outside the lab, or what you're into lately.]
+      </p>
+    </section>
+
+    <section>
+      <h2>Outside of Physics</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>[Hobby, e.g. hiking]</h3>
+          <p>[A line or two: favorite trail, a recent trip, a goal.]</p>
+        </div>
+        <div class="project">
+          <h3>[Hobby, e.g. cooking]</h3>
+          <p>[What you like to make, or something you're learning.]</p>
+        </div>
+        <div class="project">
+          <h3>[Hobby, e.g. music or reading]</h3>
+          <p>[An instrument you play, or a book you'd recommend.]</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Photos</h2>
+      <div class="gallery">
+        <figure><img src="assets/paper-placeholder.svg" alt="[Describe photo]"><figcaption>[Caption]</figcaption></figure>
+        <figure><img src="assets/paper-placeholder.svg" alt="[Describe photo]"><figcaption>[Caption]</figcaption></figure>
+        <figure><img src="assets/paper-placeholder.svg" alt="[Describe photo]"><figcaption>[Caption]</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>A Few Fun Facts</h2>
+      <ul class="plain">
+        <li>[Fun fact one]</li>
+        <li>[Fun fact two]</li>
+        <li>[Fun fact three]</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>© <span class="year">2026</span> Jenny Wan</p>
+    <p>Physics · Stanford University</p>
+  </footer>
+  <script>document.querySelectorAll('.year').forEach(e => e.textContent = new Date().getFullYear());</script>
+</body>
+</html>

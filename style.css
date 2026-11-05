@@ -104,7 +104,7 @@ main section > h2 {
    ============================================================ */
 .hero { background: var(--accent-block); color: var(--on-block); }
 .hero .wrap {
-  --name-size: clamp(3.25rem, calc(21vw - 2rem), 16rem);
+  --name-size: clamp(2.75rem, calc(14vw - 1rem), 10rem);
   display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: clamp(1rem, 3vw, 2.5rem);
   padding-block: clamp(2.5rem, 7vw, 5rem) 2rem;
 }

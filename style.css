@@ -12,9 +12,9 @@
   --on-accent: #0e0e0e;   /* text on cornflower (black reads better than white) */
   --accent-block: var(--accent); /* background of the name block */
   --on-block: #ffffff;    /* text on the name block */
-  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   color-scheme: light;
 }
 
@@ -84,8 +84,8 @@ main section > h2 {
 
 .nav { display: flex; align-items: center; justify-content: space-between; gap: .75rem 1.5rem; flex-wrap: wrap; padding-block: .8rem; }
 .nav-name {
-  font-family: var(--display); font-weight: 800; font-stretch: 75%;
-  font-size: 1.35rem; text-transform: uppercase; letter-spacing: -.01em;
+  font-family: var(--display); font-weight: 700; font-stretch: normal;
+  font-size: 1.35rem; text-transform: lowercase; letter-spacing: -.02em;
   text-decoration: none; line-height: 1;
 }
 .nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem; margin: 0; padding: 0; }
@@ -110,9 +110,9 @@ main section > h2 {
 }
 .hero-name {
   grid-column: 2; grid-row: 1;
-  font-weight: 800; font-stretch: 70%;
+  font-weight: 700; font-stretch: normal;
   font-size: var(--name-size);
-  line-height: .8; letter-spacing: -.03em; text-transform: uppercase;
+  line-height: .8; letter-spacing: -.045em; text-transform: lowercase;
 }
 .hero-sub {
   grid-column: 1 / -1; margin: 1.5rem 0 0; padding-top: 1rem;
@@ -129,8 +129,8 @@ main section > h2 {
 .index a {
   display: grid; grid-template-columns: 4rem 1fr auto; align-items: center;
   padding: .55rem .5rem; border-bottom: 2px solid var(--rule);
-  font-family: var(--display); font-weight: 800; font-stretch: 75%;
-  font-size: clamp(2rem, 6vw, 4rem); line-height: 1; text-transform: uppercase;
+  font-family: var(--display); font-weight: 700; font-stretch: normal;
+  font-size: clamp(2rem, 6vw, 4rem); line-height: 1; text-transform: lowercase;
   text-decoration: none; letter-spacing: -.01em;
 }
 .index .num { color: var(--accent-ink); }
@@ -147,9 +147,9 @@ main section > h2 {
 .page-intro { padding-block: clamp(2.5rem, 6vw, 4.5rem) 2.5rem; }
 .kicker { color: var(--accent-ink); margin: 0 0 .5rem; }
 .page-intro h1 {
-  font-weight: 800; font-stretch: 70%;
+  font-weight: 700; font-stretch: normal;
   font-size: clamp(3.5rem, 13vw, 10rem);
-  line-height: .85; letter-spacing: -.03em; text-transform: uppercase;
+  line-height: .85; letter-spacing: -.045em; text-transform: lowercase;
 }
 .page-intro p:not(.kicker) { max-width: 40rem; font-size: 1.15rem; }
 .page-intro h1 + p { margin-top: 2rem; }
@@ -190,7 +190,7 @@ time { color: var(--muted); white-space: nowrap; }
 .pub:first-child { padding-top: 0; }
 .pub::before {
   content: counter(pub, decimal-leading-zero);
-  font-family: var(--display); font-weight: 800; font-stretch: 75%;
+  font-family: var(--display); font-weight: 700; font-stretch: normal;
   font-size: 2rem; line-height: 1; color: var(--accent-ink);
 }
 .pub-thumb { width: 150px; height: 105px; object-fit: cover; border: 2px solid var(--rule); filter: grayscale(1); }
@@ -217,7 +217,7 @@ time { color: var(--muted); white-space: nowrap; }
   display: block; padding: 1.4rem 1.5rem 1.6rem; text-decoration: none;
   border: 2px solid var(--rule);
 }
-.project h3 { font-stretch: 75%; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; line-height: 1.05; }
+.project h3 { font-weight: 700; font-size: 1.5rem; text-transform: lowercase; line-height: 1.05; }
 .project p { color: var(--muted); font-size: .95rem; margin: .6rem 0 0; }
 .project:hover { background: var(--accent); color: var(--on-accent); }
 .project:hover p { color: var(--on-accent); }
